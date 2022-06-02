@@ -5,7 +5,7 @@ const gameGuess = (min, max) => {
   let guess = parseInt(prompt(`Guess an integer between ${min} and ${max} `));
   let number;
     do {
-      number = Math.floor(Math.random() * (max - min) ) + min;
+      number = Math.round(Math.random() * (max - min) + min);
         if (number === guess) {
           max++;
           stage += 1;
